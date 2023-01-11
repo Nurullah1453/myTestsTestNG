@@ -1,14 +1,12 @@
-package tests.myTestTestNG;
+package tests.myAmazonTests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AmazonPage;
 import utilities.Driver;
 
-public class Test01 {
+public class AmazonTest02 {
 
    @Test
     public void test01(){

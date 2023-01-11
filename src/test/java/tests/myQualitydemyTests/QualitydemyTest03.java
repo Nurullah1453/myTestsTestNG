@@ -1,4 +1,4 @@
-package tests.myTestTestNG;
+package tests.myQualitydemyTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,7 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class Test06 {
+public class QualitydemyTest03 {
     @Test
     public void pozitifLoginTest(){
 

@@ -1,4 +1,4 @@
-package tests.myTestTestNG;
+package tests.myQualitydemyTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import pages.QualitydemyPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class Test05 {
+public class QualitydemyTest02 {
 
     //3 test methodu oluşturun
     //1.de yanlıs email,dogru sifre

@@ -1,14 +1,19 @@
-package tests.myTestTestNG;
+package tests.myQualitydemyTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AmazonPage;
 import pages.QualitydemyPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class Test07 {
+public class QualitydemyTest10 {
+
+    //3 test method'u olusturun
+    //1.de yanlis email, dogru sifre
+    //2.de dogru email yanlis sifre
+    //3.de yanlis email, yanlis sifre ile giris yapmayi deneyin
+    //giris yapilamadigini test edin
 
     QualitydemyPage qualitydemyPage=new QualitydemyPage();
     @Test
@@ -17,53 +22,42 @@ public class Test07 {
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage=new QualitydemyPage();
         qualitydemyPage.ilkLoginLinki.click();
-        if (qualitydemyPage.cookie.isDisplayed()){
-            qualitydemyPage.cookie.click();
-        }
+        qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUserName"));
+        qualitydemyPage.passwordKutusu.sendKeys("qdGecerliPassword");
         ReusableMethods.bekle(3);
-        qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
-        qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
-        qualitydemyPage.loginButonu.click();
-
+        qualitydemyPage.cookie.click();
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
-
         Driver.closeDriver();
+
     }
 
     @Test
-    public void yanlısPassword(){
+    public void yanlısPassword() {
+
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage=new QualitydemyPage();
         qualitydemyPage.ilkLoginLinki.click();
-        if (qualitydemyPage.cookie.isDisplayed()){
-            qualitydemyPage.cookie.click();
-        }
-        ReusableMethods.bekle(3);
         qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUserName"));
-        qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
-        qualitydemyPage.loginButonu.click();
-
+        qualitydemyPage.passwordKutusu.sendKeys("qdGecersizPassword");
+        ReusableMethods.bekle(3);
+        qualitydemyPage.cookie.click();
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
         Driver.closeDriver();
     }
 
     @Test
-    public void yanlısEmailPassword(){
+    public void qdGecersizPassword(){
 
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage=new QualitydemyPage();
         qualitydemyPage.ilkLoginLinki.click();
-        if (qualitydemyPage.cookie.isDisplayed()){
-            qualitydemyPage.cookie.click();
-        }
-        ReusableMethods.bekle(3);
-        qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
+        qualitydemyPage.kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUserName"));
         qualitydemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
-        qualitydemyPage.loginButonu.click();
-
+        ReusableMethods.bekle(3);
+        qualitydemyPage.cookie.click();
         Assert.assertTrue(qualitydemyPage.kullaniciEmailKutusu.isDisplayed());
-
         Driver.closeDriver();
+
 
     }
 }

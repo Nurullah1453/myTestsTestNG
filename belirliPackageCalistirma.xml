@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Belirli packageleri calistirma">
+
+    <test name="İstenen package Calistirma">
+
+        <packages>
+            <package name="tests.myAmazonTests"></package>
+        </packages>
+    </test>
+</suite>

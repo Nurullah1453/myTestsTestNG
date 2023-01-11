@@ -1,4 +1,4 @@
-package tests.myTestTestNG;
+package tests.myQualitydemyTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import pages.QualitydemyPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class Test04 {
+public class QualitydemyTest01 {
 
     @Test
     public void test(){

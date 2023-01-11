@@ -1,4 +1,4 @@
-package tests.myTestTestNG;
+package tests.MyZeroTests;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -7,13 +7,12 @@ import org.testng.asserts.SoftAssert;
 import pages.ZeroWebAppPage;
 import utilities.Driver;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class Test03 {
+public class ZeroTest01 {
 
     @Test
     public void test(){

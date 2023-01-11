@@ -1,15 +1,12 @@
-package tests.myTestTestNG;
+package tests.myAmazonTests;
 
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.AmazonPage;
 import utilities.Driver;
-import utilities.ReusableMethods;
 
-import java.util.Arrays;
-
-public class Test02 {
+public class AmazonTest01 {
 
     @Test
     public void test(){
