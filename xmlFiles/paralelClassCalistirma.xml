@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Classlari calistirma" parallel="classes" thread-count="2">
+
+    <test name="Istenen classlari calistirma">
+
+        <classes>
+            <class name="tests.myQualitydemyTests.QualitydemyTest01"></class>
+            <class name="tests.myQualitydemyTests.QualitydemyTest02"></class>
+            <class name="tests.myQualitydemyTests.QualitydemyTest03"></class>
+            <class name="tests.myQualitydemyTests.QualitydemyTest04"></class>
+        </classes>
+
+    </test>
+</suite>

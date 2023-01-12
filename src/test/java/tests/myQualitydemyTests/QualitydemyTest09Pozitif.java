@@ -7,7 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class QualitydemyPozitifTest09 {
+public class QualitydemyTest09Pozitif {
 
     @Test
     public void pozitifLoginTest(){

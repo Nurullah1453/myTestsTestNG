@@ -25,6 +25,7 @@ public class QualitydemyPage {
 
     @FindBy(linkText = "My courses")
     public WebElement basariliGirisCoursesLinki;
+
     @FindBy(xpath = "//a[text()='Accept']")
     public WebElement cookie;
 
