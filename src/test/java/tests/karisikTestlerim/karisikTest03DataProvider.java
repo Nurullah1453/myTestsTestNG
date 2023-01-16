@@ -7,7 +7,7 @@ import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class dataProvider {
+public class karisikTest03DataProvider {
 
 
     @DataProvider
