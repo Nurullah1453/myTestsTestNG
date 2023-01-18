@@ -43,7 +43,7 @@ public class QualitydemyPage {
     @FindBy(xpath = "//a[text()='2']")
     public WebElement secondPage;
 
-    @FindBy(xpath = "(//a[@class='course-title'])[4]")
+    @FindBy(xpath = "(//a[@class='course-title'])[4 ]")
     public WebElement theEnglishMaster;
 
     @FindBy(xpath = "//button[text()='Buy now']")
@@ -67,6 +67,30 @@ public class QualitydemyPage {
     @FindBy(xpath = "//footer[@class='footer-area d-print-none mt-5 pt-5']")
     public WebElement footer;
 
+    @FindBy(xpath = "(//*[text()='0 Lectures'])[10]")
+    public WebElement lectures;
+
+    @FindBy(xpath = "//h5[text()=' Java Kursu']")
+    public WebElement javaKursu;
+
+    @FindBy(xpath = "//button[@class='btn btn-add-wishlist ']")
+    public WebElement addWishList;
+
+    @FindBy(xpath = "(//div[@class='icon'])[3]")
+    public WebElement wishListIcon;
+
+    @FindBy(xpath = "//a[text()='Go to wishlist']")
+    public WebElement goToWishListButton;
+
+    @FindBy(xpath = "//button[@onclick='handleWishList(this)']")
+    public WebElement wishListCikarma;
+
+    @FindBy(xpath = "//a[@class='btn btn-danger btn-yes']")
+    public WebElement yesButton;
+
+    @FindBy(xpath = "//*[@placeholder='Search for courses']")
+    public WebElement aramaKutusu;
+
     public void odemeBilgileri(){
 
         Actions actions=new Actions(Driver.getDriver());
@@ -80,9 +104,13 @@ public class QualitydemyPage {
        payButton.click();
         ReusableMethods.bekle(5);
 
-
-
     }
-
+    public void loginMethodu(){
+        cookie.click();
+        ilkLoginLinki.click();
+        kullaniciEmailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliEmail"));
+        passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliSifrem"));
+        loginButonu.click();
+    }
 
 }

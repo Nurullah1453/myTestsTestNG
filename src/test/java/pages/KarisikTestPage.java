@@ -38,6 +38,14 @@ public class KarisikTestPage {
 
     }
 
+    @FindBy(xpath = "//input[@class='gLFyf']")
+    public WebElement googleAramaKutusu;
+
+    @FindBy(xpath = "//div[@id='result-stats']")
+    public WebElement googleAramaSonucu;
+
+
+
 
 
 }
